@@ -8,25 +8,12 @@ public class ToDo {
         this.isDone = false;
     }
 
-    public ToDo(String task) {
-        this.task = task;
-        this.isDone = false;
-    }
-
     public String getTask() {
         return this.task;
     }
 
     public void setTask(String task) {
         this.task = task;
-    }
-
-    public boolean getIsDone() {
-        return this.isDone;
-    }
-
-    public void setIsDone(boolean isDone) {
-        this.isDone = isDone;
     }
 
     public void markAsDone() {

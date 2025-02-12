@@ -30,7 +30,7 @@ public class App {
                     break;
                 case 2:
                     for(int i = 0; i < list.size(); i++){
-                        System.out.println(i + 1 + ". " + list.get(i));
+                        System.out.println((i + 1) + ". " + list.get(i));
                     }
                     break;
                 case 3:
