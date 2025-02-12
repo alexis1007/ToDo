@@ -9,7 +9,6 @@ public class App {
         int option;
         int taskNumber;
 
-
         while(true){
             System.out.println("1. Add a task");
             System.out.println("2. List tasks");
@@ -20,40 +19,47 @@ public class App {
             option = scanner.nextInt();
             scanner.nextLine();
             System.out.println("=====================================");
+            
             switch(option){
-                case 1:
-                    System.out.println("Enter a task: ");
-                    String task = scanner.nextLine();
-                    ToDo todo = new ToDo();
-                    todo.setTask(task);
-                    list.add(todo);
-                    break;
-                case 2:
-                    for(int i = 0; i < list.size(); i++){
-                        System.out.println((i + 1) + ". " + list.get(i));
-                    }
-                    break;
-                case 3:
-                    System.out.println("Enter the task number: ");
-                    taskNumber = scanner.nextInt();
-                    list.get(taskNumber - 1).markAsDone();
-                    break;
-                case 4:
-                    System.out.println("Enter the task number: ");
-                    taskNumber = scanner.nextInt();
-                    list.get(taskNumber - 1).markAsUndone();
-                    break;
-                case 5:
-                    System.exit(0);
-                    break;
-                default:
-                    System.out.println("Invalid option");
-                    break;
+                    case 1:
+                        System.out.println("Enter a task: ");
+                        String task = scanner.nextLine();
+                        ToDo todo = new ToDo();
+                        todo.setTask(task);
+                        list.add(todo);
+                        break;
+                    case 2:
+                        for(int i = 0; i < list.size(); i++){
+                            System.out.println((i + 1) + ". " + list.get(i));
+                        }
+                        break;
+                    case 3:
+                        try{
+                            System.out.println("Enter the task number: ");
+                            taskNumber = scanner.nextInt();
+                            list.get(taskNumber - 1).markAsDone();
+                        } catch (Exception e) {
+                            System.out.println("Invalid option");
+                        }
+                        break;
+                    case 4:
+                        try{
+                            System.out.println("Enter the task number: ");
+                            taskNumber = scanner.nextInt();
+                            list.get(taskNumber - 1).markAsUndone();
+                        } catch (Exception e) {
+                            System.out.println("Invalid option");
+                        }
+                            break;
+                    case 5:
+                        System.exit(0);
+                        break;
+                    default:
+                        System.out.println("Invalid option");
+                        break;
+                
             }
             System.out.println("=====================================");
         }
-
-
-
     }
 }

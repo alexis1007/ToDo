@@ -7,11 +7,6 @@ public class ToDo {
         this.task = "";
         this.isDone = false;
     }
-
-    public String getTask() {
-        return this.task;
-    }
-
     public void setTask(String task) {
         this.task = task;
     }
